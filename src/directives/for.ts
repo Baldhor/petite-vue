@@ -19,7 +19,7 @@ export const _for = (el: Element, exp: string, ctx: Context) => {
 
   const nextNode = el.nextSibling
 
-  const parent = el.parentElement!
+  const parent = el.parentElement! || el.parentNode!
   const anchor = new Text('')
   parent.insertBefore(anchor, el)
   parent.removeChild(el)
